@@ -18,7 +18,7 @@ class Transfer
   
   def execute_transaction 
     
-    if @sender.balance >= @amount && @transfer_count < 1 && @sender.status =="open" || @receiver.status == "open"
+    if @sender.balance >= @amount && @transfer_count < 1 && (@sender.status =="open" || @receiver.status == "open")
       @transfer_count += 1 
       @receiver.balance += @amount 
       @sender.balance -= @amount 
