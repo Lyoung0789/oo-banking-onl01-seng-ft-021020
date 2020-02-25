@@ -30,8 +30,8 @@ class Transfer
   end 
   
   def reverse_transfer
-    @receiver -= @amount 
-    @sender += @amount 
+    @receiver.balance -= @amount 
+    @sender.balance += @amount 
     
   end 
   
